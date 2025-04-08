@@ -1,66 +1,34 @@
-<?php 
+<?php
 
-// Ex 1
+// Paramètres de connexion à la base de données
 
-$d = 5;
+// DSN (Data Source Name)
+$dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
 
-switch ($d) {
-   case 1 :
-   echo "Today is Monday";
-    break;
-   case 2 :
-   echo "Today is Tuesday";
-    break;
-   case 3 :
-   echo  "Today is Wednesday";
-    break;
-   case 4 :
-   echo "Today is Thursday";
-    break;
-   case 5 :
-   echo "Today is Friday";
-    break;
-   case 6 :
-   echo "Today is Saturday";
-    break;
-   case 7 :
-   echo "Today is Sunday";
-    break;
-default:
-echo "Looking forward to the Weekend";
+// Options pour PDO
+$options = [
+     // Gestion des erreurs avec exceptions
+    // Mode de récupération par défaut: tableau associatif
+    // Désactiver l'émulation des requêtes préparées
+];
 
-   
+try {
+    // Création de l'instance PDO
+    $pdo = new PDO($dsn, $username, $password, $options);
+    
+    // À ce stade, la connexion est établie
+    echo "Connexion à la base de données réussie !<br><br>";
+    
+    // Exercice 1: Insertion de données
+
+    echo "Nouvel utilisateur inséré avec l'ID: " . $pdo->lastInsertId() . "<br>";
+} catch (Exception $e) {
+   die('Erreur :'. $e->getMessage());
 }
 
-// Ex 2 
+   //  Exercice 2
+   echo "Utilisateurs de plus de 30 ans:<br>";
 
-$note= 16;
 
-switch($note) {
-   case $note>=18:
-      echo "Excellent!(A+)";
-   break;
-   case $note>=16 :
-      echo "Très bien!(A)";
-   break;
-   case $note>=14 :
-      echo "Bien!";
-   break;
-   case $note>=12 :
-      echo "Assez Bien!";
-   break;
-   case $note>=10: 
-      echo "Passable!";
-   break;
-
-   default:
-   echo "Note:.".$note."/20-Appreciation:";
-
-}
-
+    
    
-
-
-
-
- ?>
