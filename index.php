@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 //  Ex 1
  
  $fruits = array("pomme","banane","orange","fraise","kiwi");
