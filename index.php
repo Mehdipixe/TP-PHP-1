@@ -1,36 +1,61 @@
 <?php 
 
-//  Ex 1
- 
- $fruits = array("pomme","banane","orange","fraise","kiwi");
- 
- foreach ($fruits as $x) {
-   echo "$x <br>";
- }
- 
+// Ex 1
 
-//  Ex 2
+$d = 5;
 
-$members =  array ("Dupont Jean "=>"30 ans ","ville"=>"Paris");
+switch ($d) {
+   case 1 :
+   echo "Today is Monday";
+    break;
+   case 2 :
+   echo "Today is Tuesday";
+    break;
+   case 3 :
+   echo  "Today is Wednesday";
+    break;
+   case 4 :
+   echo "Today is Thursday";
+    break;
+   case 5 :
+   echo "Today is Friday";
+    break;
+   case 6 :
+   echo "Today is Saturday";
+    break;
+   case 7 :
+   echo "Today is Sunday";
+    break;
+default:
+echo "Looking forward to the Weekend";
 
-foreach ($members as $x => $y) {
-   echo "$x : $y <br>";
+   
 }
 
-//  Ex 3
+// Ex 2 
 
-$utilisateurs = [
-   ['nom' => 'Martin', 'note' => '15'],
-   ['nom' => 'Durand', 'note' => '12'],
-   ['nom' => 'Petit', 'mail' => '18'],
-];
+$note= 16;
 
-foreach($utilisateurs as $nb => $infos){
-   echo 'Utilisateur n°' .($nb + 1). ' :<br>';
-   foreach ($infos as $c => $v){
-       echo $c. ' : ' .$v. '<br>';
-   }
-   echo '<\br>';
+switch($note) {
+   case $note>=18:
+      echo "Excellent!(A+)";
+   break;
+   case $note>=16 :
+      echo "Très bien!(A)";
+   break;
+   case $note>=14 :
+      echo "Bien!";
+   break;
+   case $note>=12 :
+      echo "Assez Bien!";
+   break;
+   case $note>=10: 
+      echo "Passable!";
+   break;
+
+   default:
+   echo "Note:.".$note."/20-Appreciation:";
+
 }
 
    
