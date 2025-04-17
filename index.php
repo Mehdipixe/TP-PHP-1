@@ -56,13 +56,13 @@ class Moto extends Vehicule {
     }
 
     public function faireRoueArriere() {
-        return "La moto fait une roue arrière !";
+        return "La moto fait une roue arrière";
     }
 }
 
 // Utilisation des classes
-$voiture = new Voiture("Renault", "Clio", 2020, 5, "Essence");
-$moto = new Moto("Yamaha", "MT-07", 2022, 689);
+$voiture = new Voiture("Lamborghini", "Huracan", 2020, 5, "Essence");
+$moto = new Moto("Ducati", "D16", 2022, 825);
 
 // Affichage
 echo $voiture->getInfos() . "<br>";
@@ -72,4 +72,3 @@ echo $voiture->klaxonner() . "<br><br>";
 echo $moto->getInfos() . "<br>";
 echo $moto->demarrer() . "<br>";
 echo $moto->faireRoueArriere() . "<br>";
-?>
