@@ -12,11 +12,11 @@ class Vehicule {
     }
     
     public function getInfos() {
-        return "Marque: {$this->marque}, Modèle: {$this->modele}, Année: {$this->annee}";
+        echo "Marque: {$this->marque}, Modèle: {$this->modele}, Année: {$this->annee}";
     }
     
     public function demarrer() {
-        return "Le véhicule démarre.";
+        echo "Le véhicule démarre.</br>";
     }
 }
 
@@ -33,12 +33,12 @@ class Voiture extends Vehicule {
     
     // Surcharge de la méthode getInfos()
     public function getInfos() {
-        return parent::getInfos() . ", Portes: {$this->nombrePortes}, Carburant: {$this->typeCarburant}";
+        echo parent::getInfos() . ", Portes: $this->nombrePortes Carburant: $this->typeCarburant </br>";
     }
     
     // Méthode spécifique
     public function klaxonner() {
-        return "Bip Bip !";
+        echo "Bip Bip !</br>";
     }
 }
 
@@ -52,11 +52,11 @@ class Moto extends Vehicule {
     }
 
     public function getInfos() {
-        return parent::getInfos() . ", Cylindrée: {$this->cylindree} cc";
+        echo parent::getInfos() . ", Cylindrée: {$this->cylindree} cc </br>";
     }
 
     public function faireRoueArriere() {
-        return "La moto fait une roue arrière";
+        echo "La moto fait une roue arrière" ."<br>";
     }
 }
 
@@ -65,10 +65,9 @@ $voiture = new Voiture("Lamborghini", "Huracan", 2020, 5, "Essence");
 $moto = new Moto("Ducati", "D16", 2022, 825);
 
 // Affichage
-echo $voiture->getInfos() . "<br>";
-echo $voiture->demarrer() . "<br>";
-echo $voiture->klaxonner() . "<br><br>";
-
-echo $moto->getInfos() . "<br>";
-echo $moto->demarrer() . "<br>";
-echo $moto->faireRoueArriere() . "<br>";
+$voiture->getInfos();
+$voiture->demarrer();
+$voiture-> klaxonner();
+$moto->getInfos(); 
+$moto->demarrer();
+$moto->faireRoueArriere();
