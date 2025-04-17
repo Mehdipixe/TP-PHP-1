@@ -10,9 +10,9 @@ class Personne {
     
     // Constructeur
     public function __construct($nom,$prenom,$age){
-         $this-> SetNom($nom);
-         $this-> SetPrenom($prenom);
-         $this-> SetAge($age);
+         $this-> nom =$nom;
+         $this-> prenom=$prenom;
+         $this-> age=$age;
 
     }
   
@@ -50,7 +50,7 @@ class Personne {
       if($this->age >= 18){
         echo "Je suis majeur.</br>";
       } else {
-        echo "Je suis majeur.</br>";
+        echo "Je suis mineur.</br>";
       }
     }
   }
@@ -60,8 +60,8 @@ $personne->sePresenter();
 $personne->estMajeur();
 
 // Modification des propriétés
-$personne->setAge(19);
-$personne->setNom("Guillard");
+$personne->setAge(17);
+$personne->setNom("Dupont");
 $personne->SetPrenom("Lény");
 $personne->sePresenter();
 $personne->estMajeur();
